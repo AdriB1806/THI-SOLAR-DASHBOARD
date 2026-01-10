@@ -12,7 +12,7 @@ A real-time solar PV monitoring dashboard built with Streamlit, designed to matc
 - **Environmental Impact**: Total energy generated and CO2 emissions avoided
 - **Temperature Monitoring**: System and ambient temperature tracking
 
-## Installation
+## Installation and Usage
 
 1. Clone this repository:
 ```bash
@@ -22,44 +22,18 @@ cd THI-SOLAR-DASHBOARD
 
 2. Install dependencies (recommended: virtualenv)
 
-Quickest (recommended for students):
 
 ```bash
 ./setup_venv.sh
 source .venv/bin/activate
 ```
 
-Manual setup:
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
-
-### Python version notes
-
-This project uses `pandas`, `numpy`, `plotly`, and `streamlit`. On newer Python versions (e.g. Python 3.13), you need dependency versions that provide wheels for your platform.
-
-If you run into install errors when building `pandas` from source, upgrade your environment and re-install:
-
-```bash
-python -m venv .venv
-source .venv/bin/activate
-python -m pip install -U pip
-pip install -r requirements.txt
-```
-
-
-## Usage
-
-### Test Network Connection First
-Before running the dashboard, test if you're connected to THI network:
+3. Before running the dashboard, test if you're connected to THI network:
 ```bash
 ./test_network.sh
 ```
 
-### Run the Dashboard
+4. Run the Dashboard
 ```bash
 streamlit run app.py
 ```
