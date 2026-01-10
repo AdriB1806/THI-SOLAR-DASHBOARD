@@ -1,0 +1,112 @@
+/* Streamlit integration overrides for TemplateMo DayNight Admin (Snow edition)
+   Keeps your Python/data logic unchanged; only styles Streamlit DOM to match the template.
+*/
+
+/* App background + content width like .main-content */
+[data-testid="stAppViewContainer"],
+.stApp {
+  background: var(--bg-secondary) !important;
+}
+
+/* Apply template typography across main content */
+[data-testid="stAppViewContainer"] * {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+[data-testid="stAppViewContainer"] .main {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2rem !important;
+}
+
+/* Sidebar to look like template surfaces */
+section[data-testid="stSidebar"],
+section[data-testid="stSidebar"] > div {
+  background: var(--bg-primary) !important;
+  border-right: 1px solid var(--border-color);
+}
+
+section[data-testid="stSidebar"] [data-testid="stSidebarContent"] {
+  padding: 1.25rem 1rem;
+}
+
+/* Sidebar headings/text */
+section[data-testid="stSidebar"] * {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+}
+
+section[data-testid="stSidebar"] p,
+section[data-testid="stSidebar"] span,
+section[data-testid="stSidebar"] label {
+  color: var(--text-primary) !important;
+}
+
+/* Radio group as nav items */
+section[data-testid="stSidebar"] div[role="radiogroup"] label {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 0.55rem 0.75rem;
+  margin: 0.25rem 0;
+  background: transparent;
+  transition: var(--transition);
+}
+
+section[data-testid="stSidebar"] div[role="radiogroup"] label:hover {
+  background: var(--accent-light, rgba(11, 95, 255, 0.18));
+  border-color: rgba(0,0,0,0);
+}
+
+section[data-testid="stSidebar"] div[role="radiogroup"] label:has(input:checked) {
+  background: var(--accent-light, rgba(11, 95, 255, 0.18));
+  border-color: rgba(0,0,0,0);
+}
+
+/* Buttons (Streamlit) */
+.stButton > button,
+.stDownloadButton > button {
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover)) !important;
+  color: #fff !important;
+  border: 1px solid transparent !important;
+  border-radius: 10px !important;
+  padding: 0.7rem 1rem !important;
+  font-weight: 600 !important;
+  box-shadow: var(--shadow) !important;
+  transition: var(--transition) !important;
+}
+
+.stButton > button:hover,
+.stDownloadButton > button:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md) !important;
+}
+
+/* Inputs / selects */
+div[data-baseweb="input"] input,
+div[data-baseweb="textarea"] textarea,
+div[data-baseweb="select"] > div {
+  background: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+}
+
+div[data-baseweb="input"] input:focus,
+div[data-baseweb="textarea"] textarea:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px var(--accent-light, rgba(11, 95, 255, 0.18)) !important;
+}
+
+/* Charts: let template cards show through */
+.stPlotlyChart {
+  background: transparent !important;
+}
+
+/* Dataframe */
+div[data-testid="stDataFrame"] {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+}

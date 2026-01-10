@@ -1,0 +1,61 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Streamlit
+.streamlit/
+
+# Local virtual environments
+.venv/
+
+# Data files
+# Live downloads / runtime artifacts (do not commit)
+pv.csv
+test.txt
+pv_data.db
+ftp_monitor.log
+
+# Snapshot folders (created by ftp_monitor.py)
+pv_csv_snapshots/
+pvdaten_snapshots/
+
+# Local exports
+*.db
+
+# Optional: ignore local JSON exports if you add them later
+*.json
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

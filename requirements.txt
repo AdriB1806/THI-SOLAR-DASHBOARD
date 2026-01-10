@@ -1,0 +1,6 @@
+streamlit>=1.40.0,<2
+plotly>=5.18.0,<6
+pandas>=2.2.0,<2.3
+# Keep NumPy <2 by default to avoid binary incompatibilities on student machines
+# (common error: "numpy.dtype size changed" / wheels mismatch).
+numpy>=1.26.0,<2
