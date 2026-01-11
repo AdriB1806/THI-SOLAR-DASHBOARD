@@ -46,22 +46,6 @@ The dashboard will open in your browser at `http://localhost:8501`
 
 The app is configured with an enterprise light theme by default (THI blue accents, high contrast). You can still switch Streamlit themes via the Streamlit menu (top-right) if you want a different look.
 
-## Using the DayNight Admin template styling
-
-If you have the rights/license to use the TemplateMo “DayNight Admin” template, you can reuse *its CSS styling* with this Streamlit app.
-
-1. Copy the template CSS file into this repo as one of:
-    - `templatemo-daynight-style.css` (project root), or
-    - `assets/templatemo-daynight-style.css`, or
-    - `assets/daynight.css`
-
-2. Run the app normally:
-
-```bash
-streamlit run app.py
-```
-
-`app.py` will automatically detect and load the CSS file at startup and apply small THI accent overrides.
 
 ### Logo
 
