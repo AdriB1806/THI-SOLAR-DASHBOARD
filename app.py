@@ -422,6 +422,7 @@ def fetch_pv_data():
         live_power = float(production_values[-1]) if production_values else 0.0
         energy_today = float(row.get('total_energy_kWh', sum(production_values)))
         total_energy = float(row.get('total_energy_kWh', 0.0))
+        co2_avoided = total_energy * 0.366
 
         parsed = {
             'live_power': live_power,
@@ -432,7 +433,7 @@ def fetch_pv_data():
             'uv_index': 0.0,
             'total_energy': total_energy,
             'system_temp': 0.0,
-            'co2_avoided': 0.0,
+            'co2_avoided': co2_avoided,
             'ambient_temp': 0.0,
             'production_curve': {
                 # These values represent per-point energy columns, not hourly time.
