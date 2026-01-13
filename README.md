@@ -42,6 +42,20 @@ Note: `python app.py` will fail because this is a Streamlit app; it must be star
 
 The dashboard will open in your browser at `http://localhost:8501`
 
+### Testing and Validation
+
+Parallel to running the testing network script up , we created also another script to do a mroe detailed testing and validation of our web app before deployment. To do this you will have to run the script:
+
+```bash
+python validate.py                    # Generate all formats (HTML, Markdown, DOCX)
+    python validate.py --html-only        # Generate HTML only
+    python validate.py --quick            # Skip slow checks (Streamlit smoke test)
+
+```
+
+This will also generate a report with detailed analysis.
+
+
 ### Theme (night shift)
 
 The app is configured with an enterprise light theme by default (THI blue accents, high contrast). You can still switch Streamlit themes via the Streamlit menu (top-right) if you want a different look.
