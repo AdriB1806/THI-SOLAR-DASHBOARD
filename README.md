@@ -47,7 +47,6 @@ The dashboard will open in your browser at `http://localhost:8501`
 Parallel to running the testing network script up , we created also another script to do a mroe detailed testing and validation of our web app before deployment. To do this you will have to run the script:
 
 ```bash
-python validate.py                    # Generate all formats (HTML, Markdown, DOCX)
     python validate.py --html-only        # Generate HTML only
     python validate.py --quick            # Skip slow checks (Streamlit smoke test)
 
