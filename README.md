@@ -53,6 +53,8 @@ python validate.py                    # Generate all formats (HTML, Markdown, DO
 
 ```
 
+**Note: There might be some issues with importing docx so try to run while generating html only.
+
 This will also generate a report with detailed analysis.
 
 
